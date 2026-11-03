@@ -1,0 +1,27 @@
+# Tutor questions over the bundled sample paper (samples/hybrid-retrieval.pdf).
+#   section   - a section the answer must cite
+#   uncited   - true when the paper doesn't answer it: the tutor must say so and cite nothing
+- id: rrf-how
+  question: How does reciprocal rank fusion combine the two ranked lists?
+  section: 3 Method
+- id: why-ranks
+  question: Why does fusion ignore the raw scores from BM25 and vector search?
+  section: 3 Method
+- id: bm25
+  question: What does BM25 reward when scoring a passage?
+  section: 2 Background
+- id: results
+  question: What recall did fusion reach compared with BM25 and vector search?
+  section: 5 Results
+- id: identifiers
+  question: Which kind of question did BM25 answer best, the ones with exact identifiers?
+  section: 5 Results
+- id: limits
+  question: What can fusion not rescue when both methods miss a passage?
+  section: 6 Limitations
+- id: benchmark
+  question: How many questions and passages were in the benchmark?
+  section: 4 Experiments
+- id: off-paper
+  question: What is the capital of Peru?
+  uncited: true
