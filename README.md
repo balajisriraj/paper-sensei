@@ -4,17 +4,9 @@
 
 Drop in a PDF or an arXiv link. PaperSensei reads every page, including the figures, and writes you a short course: plain-language lessons, a diagram for each idea, a quiz, and a glossary that pops up as you read. Every quote a lesson relies on is checked against the paper's text. A tutor answers your questions and cites the exact sentence and page it used.
 
-
-
-
-
 https://github.com/user-attachments/assets/8b366f5a-3fe7-4e0d-999e-938c3ad36bb0
 
-
-
-
-<!-- The film: drag docs/paper-sensei-promo.mp4 onto the line below in the GitHub editor. -->
-
+<sub>▶ The film, with sound (1 min 51 s). <a href="#the-film">How it was made</a>.</sub>
 
 ## What it shows
 
@@ -121,7 +113,7 @@ The promo is made in code, not screen-recorded. `promo/capture.mjs` runs the rea
 ```bash
 cd promo && pnpm install
 node capture.mjs        # snapshots of the real UI
-node kit/render.mjs     # the film, in docs/
+node kit/render.mjs     # the film, in promo/out/ (upload the -web.mp4 to the README)
 ```
 
 ## Layout
