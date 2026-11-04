@@ -4,7 +4,9 @@
 
 Drop in a PDF or an arXiv link. PaperSensei reads every page, including the figures, and writes you a short course: plain-language lessons, a diagram for each idea, a quiz, and a glossary that pops up as you read. Every quote a lesson relies on is checked against the paper's text. A tutor answers your questions and cites the exact sentence and page it used.
 
-![A lesson: walkthrough with glossary highlights, analogy, diagram and verified quotes in the margin](docs/lesson.jpg)
+[![PaperSensei film](docs/demo.gif)](docs/paper-sensei-promo.mp4)
+
+Watch [the full film with sound](docs/paper-sensei-promo.mp4).
 
 ## What it shows
 
@@ -103,6 +105,16 @@ The eval suite builds lessons for the bundled sample paper, checks every lesson'
 ```
 
 The sample paper in `backend/samples/` was written for this project, and its experiment is illustrative. `scripts/make_sample.py` regenerates it.
+
+## The film
+
+The promo is made in code, not screen-recorded. `promo/capture.mjs` runs the real app on the scripted model, opens the sample paper, reads a lesson, takes the quiz and asks the tutor questions the way a reader would, and saves DOM snapshots of each moment. `promo/kit/render.mjs` replays those snapshots as live HTML with a moving camera, captions and kinetic type, renders it frame by frame and adds an original score synthesised in Python (`promo/kit/score.py`).
+
+```bash
+cd promo && pnpm install
+node capture.mjs        # snapshots of the real UI
+node kit/render.mjs     # the film, the poster and the GIF in docs/
+```
 
 ## Layout
 
